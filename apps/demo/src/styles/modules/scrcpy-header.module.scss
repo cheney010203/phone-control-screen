@@ -1,0 +1,62 @@
+@import "../base.scss";
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20rem 24rem 20rem 60rem;
+    width: 100%;
+    // background: rgba($color: #000000, $alpha: .8);
+    color: $font-white-color;
+    z-index: 2;
+    overflow: hidden;
+    @extend .align-items-center;
+    font-size: 40rem;
+    display: flex;
+    &.hidden {
+        pointer-events: none;
+    }
+}
+
+.header-icon {
+    $bg-color: rgba(#fff, 0.3);
+    margin-left: 10rem;
+    width: 60rem;
+    height: 60rem;
+    font-weight: bold;
+    border-radius: 50%;
+    background: $bg-color;
+    @extend .flex-core;
+    transition: all .5s ease-in-out;
+    pointer-events: all;
+    .hidden & {
+        box-shadow: 0 0 0 0 $bg-color;
+    }
+    box-shadow: 0 0 0 100vw $bg-color;
+}
+
+.hidden {
+    .header-name {
+        display: none;
+    }
+    .back-icon {
+        display: none;
+    }
+}
+
+.header-name {
+    overflow: hidden;   
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.back-icon {
+    position: absolute;
+    left:  5rem;
+    top: 50%;
+    padding: 15rem;
+    transform: translateY(-50%);
+    pointer-events: all;
+    @extend .flex-core;
+}

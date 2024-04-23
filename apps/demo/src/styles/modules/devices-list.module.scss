@@ -1,0 +1,29 @@
+@import "../variable.scss";
+.devices-list-wrapper {
+    & > * {
+        margin-top: 32rem;
+        &:nth-child(1) {
+            margin-top: 0;
+        }
+    }
+    }
+  
+.devices-item-pane {
+    // background: $panel-bg url("/pc3.jpg") center center / 100% auto;
+background-image: linear-gradient(to left, rgba(#fff, .2) 0%,   rgba(#fff, .7) 60%, rgba(#fff, 1) 100% ), url("/pc3.jpg");
+    background-position: center center ;
+    background-size: 100% auto ;
+    &:active {
+        filter: brightness(80%);
+    }
+}
+
+
+.fs-l-subTitle{
+    font-size: 13px;
+    margin: 8px 0;
+}
+
+.fs-l-oldItem{
+    margin-bottom: 12px;
+}

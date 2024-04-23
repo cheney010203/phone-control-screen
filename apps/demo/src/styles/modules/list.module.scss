@@ -1,0 +1,185 @@
+$vm_base: 750;
+
+@function vw($px) {
+    // @return ($px / $vm_base) * 100vw;
+    @return ($px/2) * 1px;
+}
+
+@mixin block {
+    background: #ffffff;
+    border-radius: vw(16);
+}
+
+@mixin device-list-item {
+    padding: vw(32);
+    border-top: 1px solid rgba(239, 241, 245, 1);
+    background-color: #fff;
+    .device-list-sub-head {
+        font-family: PingFangSC-Regular;
+        font-size: vw(24);
+        color: #899099;
+        letter-spacing: 0;
+        font-weight: 400;
+    }
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: vw(38) vw(34);
+    background: rgb(239, 241, 246);
+
+    .device-item-logo {
+        width: 40px;
+        margin-right: 4px;
+    }
+
+    .qrscanning {
+        height: vw(194);
+        @include block;
+        font-family: PingFangSC-Regular;
+        font-size: vw(24);
+        color: #899099;
+        letter-spacing: 0;
+        text-align: center;
+        font-weight: 400;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        > img {
+            width: vw(64);
+            margin-bottom: vw(32);
+        }
+    }
+
+    .device-list {
+        @include block;
+        margin-top: vw(42);
+        overflow: hidden;
+
+        .device-list-head {
+            padding-left: vw(32);
+            height: vw(100);
+            font-family: PingFangSC-Medium;
+            font-size: vw(28);
+            color: #181818;
+            letter-spacing: 0;
+            font-weight: 500;
+
+            display: flex;
+            align-items: center;
+        }
+
+        .device-item {
+            margin-top: vw(32);
+            font-size: vw(24);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .device-item-info {
+                > div:nth-of-type(1) {
+                    font-family: PingFangSC-Medium;
+                    font-size: vw(28);
+                    color: #181818;
+                    letter-spacing: 0;
+                    font-weight: 500;
+
+                    margin-bottom: vw(8);
+                }
+                > div:nth-of-type(2) {
+                    font-family: PingFangSC-Regular;
+                    font-size: vw(24);
+                    color: #c3c6cb;
+                    letter-spacing: 0;
+                    font-weight: 400;
+                }
+            }
+
+            .device-item-control {
+                display: flex;
+                align-items: center;
+
+                .device-item-control-del {
+                    font-size: vw(32);
+                    margin-right: vw(16);
+                    color: #899099;
+
+                    position: relative;
+                    top: 1px;
+
+                    transition: all 0.3s ease; /* 添加过渡效果 */
+                    &:active {
+                        // opacity: 0.1; /* 点击后的颜色 */
+                        background-color: rgba($color: #000000, $alpha: 0.15);
+                        // color: gray;
+                    }
+                }
+
+                .device-item-control-enter {
+                    padding: vw(12) vw(32);
+                    background-image: linear-gradient(
+                        135deg,
+                        #77b2ff 0%,
+                        #427bff 100%
+                    );
+                    border: 1px solid rgba(255, 255, 255, 1);
+                    box-shadow: 0px 2px 5px 0px rgba(66, 123, 255, 0.3);
+                    border-radius: vw(30);
+                    font-size: vw(24);
+                    font-family: PingFangSC-Regular;
+
+                    color: #ffffff;
+                    letter-spacing: 0;
+                    font-weight: 400;
+
+                    &:active {
+                        background-color: rgba($color: #000000, $alpha: 0.15);
+                    }
+                }
+            }
+        }
+    }
+
+    .latest-item {
+        @include device-list-item;
+    }
+
+    .no-item {
+        @include device-list-item;
+
+        font-family: PingFangSC-Regular;
+        font-size: vw(24);
+        color: #899099;
+        letter-spacing: 0;
+        line-height: vw(36);
+        font-weight: 400;
+        .no-item-inner {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+
+            > div {
+                display: flex;
+                padding-left: 80px;
+
+                &.no-item-icon {
+                    padding-left: 0;
+                }
+            }
+        }
+        .no-item-icon {
+            margin-bottom: vw(30);
+            justify-content: center;
+            > img {
+                width: vw(83);
+            }
+        }
+    }
+}

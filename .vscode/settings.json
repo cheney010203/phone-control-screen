@@ -1,0 +1,115 @@
+{
+    "cSpell.words": [
+        "ADB's",
+        "adbd",
+        "allowlist",
+        "arraybuffer",
+        "autorun",
+        "Backquote",
+        "Bframes",
+        "bootloader",
+        "brotli",
+        "Callout",
+        "Cascadia",
+        "CLSE",
+        "CNXN",
+        "colour",
+        "comlink",
+        "concat",
+        "Demuxer",
+        "Deserialization",
+        "DESERIALIZERS",
+        "diskstats",
+        "dumpsys",
+        "ebml",
+        "Embedder",
+        "entrypoints",
+        "fflate",
+        "fluentui",
+        "genymobile",
+        "Genymobile's",
+        "getprop",
+        "Golomb",
+        "griffel",
+        "keyof",
+        "laggy",
+        "localabstract",
+        "Logcat",
+        "lstat",
+        "luma",
+        "Matroska",
+        "mitm",
+        "muxer",
+        "Muxing",
+        "Nalu",
+        "opendir",
+        "PKCS",
+        "ponyfill",
+        "runtimes",
+        "scid",
+        "Scrcpy",
+        "sendrecv",
+        "sideload",
+        "sideloading",
+        "Sodb",
+        "streamsaver",
+        "struct",
+        "struct's",
+        "tcpip",
+        "tinyh",
+        "transferables",
+        "tsbuildinfo",
+        "typeof",
+        "undici",
+        "versioncode",
+        "webadb",
+        "webcodecs",
+        "webm",
+        "websockify",
+        "webusb",
+        "wifi",
+        "wirelessly",
+        "WRTE",
+        "yume",
+        "zstd"
+    ],
+    "editor.tabSize": 4,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit",
+        "source.fixAll": "explicit"
+    },
+    "jest.rootPath": "packages/struct",
+    "jest.showCoverageOnLoad": true,
+    "markdown.extension.toc.levels": "2..6",
+    "files.associations": {
+        "*.mdx": "markdown",
+        "*.json": "jsonc"
+    },
+    "prettier.tabWidth": 4,
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "version-policies.json"
+            ],
+            "url": "https://developer.microsoft.com/json-schemas/rush/v5/version-policies.schema.json"
+        }
+    ],
+    "typescript.preferences.quoteStyle": "single",
+    "typescript.lint.noEmitOnBuild": true,
+    "typescript.format.semicolons": "insert",
+    "editor.formatOnSave": true,
+    "eslint.workingDirectories": [
+        "libraries/*",
+    ],
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "explorer.sortOrder": "mixed",
+    "prettier.prettierPath": "./common/temp/node_modules/prettier/index.cjs"
+}
